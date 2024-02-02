@@ -1,0 +1,14 @@
+
+from collections import Counter
+
+celestial_objects = ['Moon', 'Gas', 'Asteroid', 'Dwarf', 'Asteroid', 'Moon', 'Asteroid']
+object_counts = Counter(celestial_objects)
+
+index = 1
+for object, count in object_counts.items():
+    print(f"{index} {object} {count}")
+    index += 1
+
+unique_words_sorted = sorted(set(celestial_objects))
+print(unique_words_sorted)
+    
