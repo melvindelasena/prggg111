@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        double[] grades = new double[3];
+        double[] units = new double[3];
+        
+        // Input grades and units for each subject
+        for (int i = 0; i < 3; i++) {
+            System.out.print("Enter grade for subject " + (i + 1) + ": ");
+            grades[i] = scanner.nextDouble();
+            System.out.print("Enter units for subject " + (i + 1) + ": ");
+            units[i] = scanner.nextDouble();
+        }
+        
+        // Calculate and output QPI
+        double qpi = calculateQPI(grades, units);
+        System.out.printf("QPI = %.2f%n", qpi);
+        
+        scanner.close();
+    }
+    
+    public static double calculateQPI(double[] grades, double[] units) {
+        double totalQualityPoints = 0;
+        double totalUnits = 0;
+        
+        for (int i = 0; i < grades.length; i++) {
+            totalQualityPoints += grades[i] * units[i];
+            totalUnits += units[i];
+        }
+        
+        return totalQualityPoints / totalUnits;
+    }
+}
+
+
+
+
+
+
+
+
