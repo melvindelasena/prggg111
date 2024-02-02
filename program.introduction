@@ -1,0 +1,11 @@
+public class Main {
+    public static void main(String[] args) {
+        String name = "borge";
+        String hobby = "computer/mobile games ";
+        int age = 20;
+        
+        String sentence = "Hi! My name is " + name + " and I am " + age + " years old. On my free time I like to " + hobby + ".";
+        
+        System.out.println(sentence);
+    }
+}
