@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        boolean continueProgram = true;
+
+        while (continueProgram) {
+            System.out.println("Choose a Shape:");
+            System.out.println("A: Square");
+            System.out.println("B: Rectangle");
+            System.out.println("C: Triangle");
+            System.out.println("D: Circle");
+
+            System.out.print("Shape: ");
+            char shapeChoice = Character.toLowerCase(scanner.next().charAt(0));
+
+            double area = 0, volume = 0;
+
+            switch (shapeChoice) {
+                case 'a':
+                    System.out.print("Input Side: ");
+                    double side = scanner.nextDouble();
+                    area = side * side;
+                    volume = side * side * side;
+                    break;
+                case 'b':
+                    System.out.print("Input Length: ");
+                    double length = scanner.nextDouble();
+                    System.out.print("Input Width: ");
+                    double width = scanner.nextDouble();
+                    area = length * width;
+                    volume = length * width * 1; 
+                    break;
+                case 'c':
+                    System.out.print("Input Base: ");
+                    double base = scanner.nextDouble();
+                    System.out.print("Input Height: ");
+                    double height = scanner.nextDouble();
+                    area = 0.5 * base * height;
+                    volume = 0; 
+                    break;
+                case 'd':
+                    System.out.print("Input Diameter: ");
+                    double diameter = scanner.nextDouble();
+                    area = Math.PI * Math.pow(diameter / 2, 2);
+                    double radius = diameter / 2.0;
+                    volume = (4.0 / 3.0) * Math.PI * Math.pow(radius, 3);
+                    break;
+                default:
+                    System.out.println("Shape not found! Try Again.");
+                    continue; 
+            }
+
+            System.out.println("Area: " + String.format("%.2f", area));
+            System.out.println("Volume: " + String.format("%.2f", volume));
+
+            System.out.print("Continue? (yes/no): ");
+            String choice = scanner.next();
+            if (!choice.equalsIgnoreCase("yes")) {
+                continueProgram = false;
+            }
+        }
+    }
+}
