@@ -1,0 +1,67 @@
+     if (a > b) {
+            System.out.println(a + "is greater than " + b);
+        }
+            else {
+                System.out.println(b + "is greater than" + a);
+
+
+// if and else statement   can get the given variables its larger number.
+// if and else statement   can get factorial of a certain number
+
+
+
+
+
+
+
+int number = 8;
+int factorial = 1;
+
+ if (number < 0) {
+    System.out.println("Error!");
+}
+else {
+ for (int i = 1; i <= number; i++) {
+    factorial *= i;
+}
+System.out.println("The factorial of " + number + " is " + factorial)
+
+//getting the factorial of a number.
+
+((((When i = 1, factorial = 1 * 1 = 1
+  When i = 2, factorial = 1 * 2 = 2
+  When i = 3, factorial = 2 * 3 = 6
+  When i = 4, factorial = 6 * 4 = 24
+  When i = 5, factorial = 24 * 5 = 120
+  When i = 6, factorial = 120 * 6 = 720
+  When i = 7, factorial = 720 * 7 = 5040
+  When i = 8, factorial = 5040 * 8 = 40320))))
+
+
+
+
+//putting loop inside a loop
+
+for (int i = 1; i <= 3; i++) {
+
+for (int j = 1; i <= 2; i++) {
+  System.out.println("i = " + i + ", j - " + j);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
